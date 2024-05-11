@@ -104,11 +104,14 @@
                 </div>
          </div>
          <script>
-            function addToCart() {
-              const notification = new Notification('Product added to cart!');
-            }
-          </script>
-  
+            document.addEventListener("DOMContentLoaded", function() {
+                var addToCartBtn = document.querySelector(".btn");
+                addToCartBtn.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    alert("Product added to cart!");
+                });
+            });
+        </script>
     
     </body>
 </html>
